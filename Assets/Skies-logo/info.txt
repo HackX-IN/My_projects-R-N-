@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Heuristica-Regular
+font link: https://www.fontsquirrel.com/fonts/heuristica
+font author: Andrej Panov
+font author site: 
+Slogan Font: KaushanScript-Regular.ttf
+
+icon designer: Alex Sheyn
+icon designer link: /theonlygoodalex
+        
+{"bg":"transparent","icon-gradient-0":"#E90DDA","icon-gradient-1":"#15CFF1","font":"#000000","slogan":"#141414"}
+      

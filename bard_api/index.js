@@ -1,0 +1,43 @@
+const express = require("express");
+const { DiscussServiceClient } = require("@google-ai/generativelanguage");
+const { GoogleAuth } = require("google-auth-library");
+
+const app = express();
+const port = 3000;
+
+const MODEL_NAME = "models/chat-bison-001";
+const API_KEY = "AIzaSyDgDHb6QHATgHtpWTl-5vW4dD-Hr_ooWbU";
+
+const client = new DiscussServiceClient({
+  authClient: new GoogleAuth().fromAPIKey(API_KEY),
+});
+
+app.get("/generate-message", async (req, res) => {
+  let messages = [{ content: req.query.ques }];
+  
+client.generateMessage({
+  // required, which model to use to generate the result
+  model: MODEL_NAME,
+  // optional, 0.0 always uses the highest-probability result
+  temperature: 0.25,
+  // optional, how many candidate results to generate
+  candidateCount: 1,
+  // optional, number of most probable tokens to consider for generation
+  top_k: 40,
+  // optional, for nucleus sampling decoding strategy
+  top_p: 0.95,
+  prompt: {
+    messages: messages,
+  },
+}).then(result => {
+    console.log("First Response:", result[0].candidates[0]?.content);
+
+    messages.push({ content: result[0].candidates[0]?.content });
+   // console.log(JSON.stringify(result, null, 2));
+    res.status(200).json({ resp: messages })
+});
+});
+
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
+});

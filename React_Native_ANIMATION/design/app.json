@@ -1,0 +1,8 @@
+{
+  "expo": {
+    "name": "design",
+    "slug": "design",
+    "scheme": "design",
+    "plugins": ["expo-router"]
+  }
+}

@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Rosario-Italic
+font link: http://www.omnibus-type.com/fonts/rosario/
+font author: Omnibus Type
+font author site: http://www.omnibus-type.com/
+
+
+icon designer: Hysen Drogu
+icon designer link: /hy.drogu
+        
+{"bg":"#F3F6EF","icon-gradient-0":"#FD9245","icon-gradient-1":"#06A96B","font":"#1E2314","slogan":"#323728"}
+      
